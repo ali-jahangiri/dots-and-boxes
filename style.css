@@ -1,0 +1,296 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:root {
+  --turn-red: #f3849c;
+  --turn-blue: #8789f8;
+}
+
+#container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+  margin: auto;
+}
+
+#container[turn="red"] .divider:hover, #container[turn="red"] .column:hover {
+  background-color: var(--turn-red);
+  opacity: .4;
+}
+
+#container[turn="blue"] .divider:hover, #container[turn="blue"] .column:hover {
+  background-color: var(--turn-blue);
+  opacity: .4;
+}
+
+div [class*='rowContainer'] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+div [class*='columnContainer'] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+#filledBoxesAreas {
+  position: absolute;
+  left: 0;
+  top: 23px;
+  width: 100%;
+  height: 96%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  z-index: -1;
+}
+
+.filledBoxesAreas-box {
+  width: 98px;
+  margin: 0 15px;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 7px;
+  -webkit-transition: .2s;
+  transition: .2s;
+  opacity: 0.4;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: .5rem 0;
+}
+
+.row .dot {
+  width: 10px;
+  height: 10px;
+  background-color: #525251;
+  border-radius: 50%;
+  margin: 0 .5rem;
+}
+
+.row .divider {
+  width: 100px;
+  height: 7px;
+  border-radius: 10px;
+  background-color: #e5e5e5;
+  cursor: pointer;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.row:first-child .dot {
+  margin-left: 0;
+}
+
+.column {
+  width: 7px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: #e5e5e5;
+  cursor: pointer;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.blueLine {
+  background-color: #8789f8 !important;
+}
+
+.blueLine:hover {
+  opacity: 1 !important;
+}
+
+.redLine {
+  background-color: #f3849c !important;
+}
+
+.redLine:hover {
+  opacity: 1 !important;
+}
+
+.masterContainer {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header .headerContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem;
+  background-color: #040404;
+  border-radius: 0 0 15px 15px;
+}
+
+header .headerContainer div {
+  color: white;
+}
+
+header .headerContainer div svg {
+  width: 1rem;
+  height: 1rem;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,149 @@
+@import "./style/_reset.scss";
+
+$blockThickness : 7px;
+
+:root {
+    --turn-red : #f3849c;
+    --turn-blue : #8789f8;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin: auto;
+}
+
+#container[turn="red"] {
+    .divider , .column {
+        &:hover {
+            background-color: var(--turn-red);
+            opacity: .4;
+        }
+    }
+}
+
+#container[turn="blue"] {
+    .divider , .column {
+        &:hover {
+            background-color: var(--turn-blue);
+            opacity: .4;
+        }
+    }
+}
+
+div [class*='rowContainer'] {
+    display: flex;
+}
+
+
+div [class*='columnContainer'] {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+#filledBoxesAreas {
+    position: absolute;
+    left: 0;
+    top: 23px;
+    width: 100%;
+    height: 96%;
+    display: flex;
+    flex-wrap: wrap ;
+    z-index: -1;
+}
+
+
+.filledBoxesAreas-box {
+    width: 98px;
+    margin: 0 15px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    transition: .2s;
+    opacity: 0.4;
+}
+
+
+.row {
+    display: flex;
+    margin: .5rem 0;
+
+    .dot {
+        width: 10px;
+        height: 10px;
+        background-color: #525251;
+        border-radius: 50%;
+        margin: 0 .5rem;
+
+    }
+
+    .divider {
+        width: 100px;
+        height: $blockThickness;
+        border-radius: 10px;
+        background-color: #e5e5e5;
+        cursor: pointer;
+        transition: .2s;
+    }
+
+    &:first-child {
+        .dot {
+            margin-left: 0;
+        }
+    }
+
+}
+
+.column {
+    width: $blockThickness;
+    height: 100px;
+    border-radius: 10px;
+    background-color: #e5e5e5;
+    cursor: pointer;
+    transition: .2s;
+}
+
+
+.blueLine {
+    background-color: #8789f8 !important;
+
+    &:hover {
+        opacity: 1 !important;
+    }
+}
+
+.redLine {
+    background-color: #f3849c !important;
+    &:hover {
+        opacity: 1 !important;
+    }
+}
+
+.masterContainer {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    .headerContainer {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        background-color: #040404;
+        border-radius: 0 0 15px 15px;
+
+        div {
+            color: white;
+            svg {
+                width: 1rem;
+                height: 1rem;
+            }
+        }
+    }
+}
