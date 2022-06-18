@@ -1,10 +1,22 @@
 @import "./style/_reset.scss";
+@import "./style/login";
+@import "./style/lobby";
 
 $blockThickness : 7px;
 
 :root {
     --turn-red : #f3849c;
     --turn-blue : #8789f8;
+}
+
+#appDOMEntry {
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+body , * {
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Work Sans', sans-serif;
 }
 
 #container {
@@ -133,16 +145,45 @@ div [class*='columnContainer'] {
 header {
     .headerContainer {
         display: flex;
+        align-items: center;
         justify-content: space-between;
-        padding: 1rem;
+        padding: 1rem 2rem;
         background-color: #040404;
         border-radius: 0 0 15px 15px;
+        box-shadow: 0px 20px 40px -10px #b1b1b1;
+        height: 65px;
 
-        div {
+        & > div {
+            padding: 1rem;
+            height: 50px;
+            width: 150px;
             color: white;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+
+            div {
+                display: flex;
+                align-items: center;
+            }
+
             svg {
-                width: 1rem;
-                height: 1rem;
+                width: 1.5rem;
+                height: 1.5rem;
+                fill: white;
+            }
+
+            p {
+                margin-left: .5rem;
+            }
+
+
+            &:first-child {
+                background-color: var(--turn-blue);
+            }
+
+            &:last-child {
+                background-color: var(--turn-red);
             }
         }
     }

@@ -6,47 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WIKI</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="masterContainer">
-      <header>
-        <div class="headerContainer">
-          <div>
-            <p>user 1</p>
-            <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="512" height="512"><path d="M12,12A6,6,0,1,0,6,6,6.006,6.006,0,0,0,12,12ZM12,2A4,4,0,1,1,8,6,4,4,0,0,1,12,2Z"/><path d="M12,14a9.01,9.01,0,0,0-9,9,1,1,0,0,0,2,0,7,7,0,0,1,14,0,1,1,0,0,0,2,0A9.01,9.01,0,0,0,12,14Z"/></svg>
-            <span></span>
-          </div>
-          <div>
-            <p>user 2</p>
-            <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="512" height="512"><path d="M12,12A6,6,0,1,0,6,6,6.006,6.006,0,0,0,12,12ZM12,2A4,4,0,1,1,8,6,4,4,0,0,1,12,2Z"/><path d="M12,14a9.01,9.01,0,0,0-9,9,1,1,0,0,0,2,0,7,7,0,0,1,14,0,1,1,0,0,0,2,0A9.01,9.01,0,0,0,12,14Z"/></svg>
-            <span></span>
-          </div>
-        </div>
-      </header>
-      <div id="container">
-        <div id="filledBoxesAreas"></div>
-      </div>
-    </div>
+  <div id="appDOMEntry"></div>
+  <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-app.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
     
-    <!-- <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-app.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-      
-        // Your web app's Firebase configuration
-        const firebaseConfig = {
-          apiKey: "AIzaSyCyWO9fMlKtVnJZlP6u9YR5yvBsR1J5tGY",
-          authDomain: "wiki-69af3.firebaseapp.com",
-          projectId: "wiki-69af3",
-          storageBucket: "wiki-69af3.appspot.com",
-          messagingSenderId: "336813757427",
-          appId: "1:336813757427:web:e71ed90e8cfb33a86af886"
-        };
-      
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-      </script> -->
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyCyWO9fMlKtVnJZlP6u9YR5yvBsR1J5tGY",
+        authDomain: "wiki-69af3.firebaseapp.com",
+        projectId: "wiki-69af3",
+        storageBucket: "wiki-69af3.appspot.com",
+        messagingSenderId: "336813757427",
+        appId: "1:336813757427:web:e71ed90e8cfb33a86af886"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+
+      window.firebase = app;
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
